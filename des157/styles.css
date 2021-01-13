@@ -107,9 +107,14 @@ footer{
     margin-right: 0rem;
 }
 
+.name{
+    padding: 1rem;
+    margin-right: 5rem;
+}
+
 .footername{
     padding: 1rem;
-    margin-right: 0rem;
+    margin-right: 4rem;
 }
 
 a {
