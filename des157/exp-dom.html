@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Experimentation</title>
+</head>
+<body>
+    <h1>Random Restaurant</h1>
+
+    <article>
+    
+    </article>
+
+    <script>
+
+        var name = prompt("Welcome to Random Restaurant! What is your name?", "");
+        var food = ["noodles", "fried rice", "pizza", "french fries", "a smoothie"]
+        
+        var myParagraph = document.createElement("p");
+        var myText = document.createTextNode(`Hi ${name}, welcome!`);
+        myParagraph.appendChild(myText);
+        document.querySelector("article").appendChild(myParagraph);
+
+        function randomInt(min, max){
+        return Math.floor((max - min + 1) * Math.random()) + min;     
+        }
+
+        function order() {
+            var question = prompt("Would you like to order?", "");
+            if (question == "yes") {
+                var max = food.length - 1;
+                var dish = food[randomInt(0, max)];
+                var myParagraph2 = document.createElement("p");
+                var myText2 = document.createTextNode(`Here is your order of ${dish}. Enjoy!`);
+                myParagraph2.appendChild(myText2);
+                document.querySelector("article").appendChild(myParagraph2);
+            } else {
+                var myParagraph3 = document.createElement("p");
+                var myText3 = document.createTextNode(`Ok bye!`);
+                myParagraph3.appendChild(myText3);
+                document.querySelector("article").appendChild(myParagraph3);
+            }
+        }
+        order();
+
+        
+    </script>
+</body>
+</html>
