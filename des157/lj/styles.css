@@ -1,6 +1,6 @@
 body {
     background-color: #faf3dd;
-    margin-left: 10%;
+    margin-left: 18%;
     margin-right: 18%;
     margin-top: 2%;
     margin-bottom: 5%;
@@ -13,46 +13,10 @@ main {
     justify-content: space-between;
 }
 
-.column1 {
-    width: 15rem;
-    padding: .5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
-    background: #aed9e0;
-    border: 10px solid #aed9e0;
-    border-radius: 25px;
-}
-
-.column1 > ul li {
-    list-style-type: none;
-}
-
-.column2 {
-    width: 15rem;
-    padding: .5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
-    background: #ffa69e;
-    border: 10px solid #ffa69e;
-    border-radius: 25px;
-}
-
-.column2 > ul li {
-    list-style-type: none;
-}
-
-.column3 {
-    width: 15rem;
-    padding: .5rem;
-    padding-left: 1.5rem;
-    padding-bottom: 1rem;
-    background: #b8f2e6;
-    border: 10px solid #b8f2e6;
-    border-radius: 25px;
-}
-
-.column3 > ul li {
-    list-style-type: none;
+article {
+    padding-left: 5.5rem;
+    padding-right: 5.5rem;
+    line-height: 180%;
 }
 
 #banner {
@@ -73,12 +37,11 @@ main {
 #circle {
     width: 100px;
     height: 100px;
+    display: block;
     border-radius: 50%;
     background-color: #91c5dc;
     margin: auto;
-    position: absolute;
-    bottom: 590px;
-    left: 590px;
+    margin-top: 10%;
 }
 
 #circle:hover {
@@ -104,6 +67,7 @@ footer{
 
 .email{
     padding: 1rem;
+    padding-left: 4rem;
     margin-right: 0rem;
 }
 
