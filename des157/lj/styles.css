@@ -1,0 +1,127 @@
+body {
+    background-color: #faf3dd;
+    margin-left: 10%;
+    margin-right: 18%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.column1 {
+    width: 15rem;
+    padding: .5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    background: #aed9e0;
+    border: 10px solid #aed9e0;
+    border-radius: 25px;
+}
+
+.column1 > ul li {
+    list-style-type: none;
+}
+
+.column2 {
+    width: 15rem;
+    padding: .5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    background: #ffa69e;
+    border: 10px solid #ffa69e;
+    border-radius: 25px;
+}
+
+.column2 > ul li {
+    list-style-type: none;
+}
+
+.column3 {
+    width: 15rem;
+    padding: .5rem;
+    padding-left: 1.5rem;
+    padding-bottom: 1rem;
+    background: #b8f2e6;
+    border: 10px solid #b8f2e6;
+    border-radius: 25px;
+}
+
+.column3 > ul li {
+    list-style-type: none;
+}
+
+#banner {
+    width: 798px;
+    height: 248px;
+    background: linear-gradient(90deg, #ffadad, #ffd6a5, #fdffb6, #ffadad);
+    margin: auto;
+    border: 2px solid white;
+    border-radius: 25px;
+    animation: banner 14s linear infinite;
+    animation-direction: alternate;
+}
+@keyframes banner {
+    0% {background-position: 0px}
+    100% {background-position: 798px}
+}
+
+#circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #91c5dc;
+    margin: auto;
+    position: absolute;
+    bottom: 590px;
+    left: 590px;
+}
+
+#circle:hover {
+    cursor: pointer;
+}
+
+#circle:hover {
+    background-color: rgb(190, 136, 244);
+    transition: all 5s ease-in-out;
+
+}
+
+footer{
+    width: 98%;
+    background-color: rgb(223, 203, 255);
+    border: 10px solid rgb(223, 203, 255);
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.email{
+    padding: 1rem;
+    margin-right: 0rem;
+}
+
+.name{
+    padding: 1rem;
+    margin-right: 5rem;
+}
+
+.footername{
+    padding: 1rem;
+    margin-right: 4rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: #faf3dd;
+}
