@@ -1,10 +1,17 @@
 body {
-    background-color: #faf3dd;
+    background-image: linear-gradient(-45deg,#cba8f4, #ffadad, #fdffb6, #ffadad, #cba8f4);
+    background-size: 400% 400%;
     margin-left: 18%;
     margin-right: 18%;
     margin-top: 2%;
     margin-bottom: 5%;
     font-family: 'Montserrat', sans-serif;
+    animation: body 10s ease-in-out infinite
+}
+@keyframes body {
+    0% {background-position: 0 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0 50%}
 }
 
 main {
@@ -13,56 +20,48 @@ main {
     justify-content: space-between;
 }
 
+#title{
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 2px;
+    padding-top: 2rem;
+    line-height: 235%;
+}
+
+#bigtitle{
+    font-size: 37px;
+}
+
+section {
+    margin: auto;
+    height: 900px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url(images/notepage.svg);
+    background-position: center 0%;
+}
+
 article {
-    padding-left: 5.5rem;
-    padding-right: 5.5rem;
-    line-height: 180%;
+    padding-top: 5.5rem;
+    padding-left: 10rem;
+    padding-right: 11.5rem;
+    line-height: 190%;
 }
 
-#banner {
-    width: 798px;
-    height: 248px;
-    background: linear-gradient(90deg, #ffadad, #ffd6a5, #fdffb6, #ffadad);
-    margin: auto;
-    border: 2px solid white;
-    border-radius: 25px;
-    animation: banner 14s linear infinite;
-    animation-direction: alternate;
-}
-@keyframes banner {
-    0% {background-position: 0px}
-    100% {background-position: 798px}
-}
-
-#circle {
-    width: 100px;
-    height: 100px;
-    display: block;
-    border-radius: 50%;
-    background-color: #91c5dc;
-    margin: auto;
-    margin-top: 10%;
-}
-
-#circle:hover {
-    cursor: pointer;
-}
-
-#circle:hover {
-    background-color: rgb(190, 136, 244);
-    transition: all 5s ease-in-out;
-
+#articletitle{
+    font-size: 20px;
 }
 
 footer{
-    width: 98%;
-    background-color: rgb(223, 203, 255);
-    border: 10px solid rgb(223, 203, 255);
+    width: 95%;
+    background-size: 100% 100%;
+    background-color: rgba(255, 255, 255, 0.514);
+    border: 6px solid rgb(223, 203, 255);
     border-radius: 25px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 2rem;
+    margin-top: 3rem;
+    margin-bottom: -5%;
 }
 
 .email{
@@ -87,5 +86,5 @@ a {
 }
 
 a:hover {
-    background-color: #faf3dd;
+    background-color: rgb(223, 203, 255);
 }
