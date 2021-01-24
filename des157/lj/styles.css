@@ -27,7 +27,6 @@ main {
     padding-bottom: .5rem;
     line-height: 235%;
     text-align: center;
-    margin-right: 3rem;
 }
 
 #bigtitle{
@@ -36,6 +35,7 @@ main {
 
 section {
     margin: auto;
+    margin-left: 3rem;
     height: 900px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -45,7 +45,7 @@ section {
 
 article {
     padding-top: 5.5rem;
-    padding-left: 10rem;
+    padding-left: 9.5rem;
     padding-right: 11.5rem;
     line-height: 190%;
 }
@@ -55,6 +55,7 @@ article {
 }
 
 footer{
+    margin: auto;
     width: 95%;
     background-size: 100% 100%;
     background-color: rgba(255, 255, 255, 0.514);
