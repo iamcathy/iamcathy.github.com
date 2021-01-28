@@ -54,6 +54,14 @@ article {
     font-size: 20px;
 }
 
+#articletitle2{
+    font-size: 20px;
+}
+
+#divider {
+    margin-top: 2rem;
+}
+
 footer{
     margin: auto;
     width: 95%;
