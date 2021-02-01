@@ -1,5 +1,4 @@
 body {
-    background-image: #f2f9e9;
     color: #2c13e1;
     background-image: url('images/bg.png');
     background-repeat: no-repeat;
@@ -85,7 +84,6 @@ fieldset label {
 #btn:hover {
     background-color: #2c13e1;
     border-radius: 2px;
-    border-color: none;
     padding-top: 10px;
     padding-bottom: 10px;
     letter-spacing: 1px;
@@ -147,7 +145,6 @@ canvas{
 #clearBtn:hover {
     background-color: #2c13e1;
     border-radius: 2px;
-    border-color: none;
     letter-spacing: 1px;
     color: white;
 }
@@ -226,7 +223,7 @@ p {
 }
 
 .showing {
-    visibility: showing;
+    visibility: visible;
     opacity: 1;
 }
 
