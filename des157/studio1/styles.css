@@ -249,4 +249,5 @@ footer {
     color: #2c13e1;
     margin-right: 25%;
     margin-top: -41.3%;
+    z-index: -4;
 }
