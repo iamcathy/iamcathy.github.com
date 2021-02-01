@@ -4,36 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Build a Mad Lib Script</title>
+    <title>Let's Get Cooking!</title>
+    <link rel="shortcut icon" type="image/jpg" href="images/sparkle1.png"/>
+    <link type="text/css" rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <script src = "script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>Build a Mad Lib Script</h1>
+        <h1 id = "title">What should we cook?</h1>
     </header>
 
     <main>
+        <canvas id = "myCanvas" width = "700" height = "780">
+                Your browser does not support canvas drawing.
+        </canvas>
+
+        <input type = "button" id = "clearBtn" value = "clear canvas"/>
+        <p>✳ click to draw your favorite foods into the pan!</p>
+
         <form id = "myForm">
-            <label for = "noun1">Provide a noun</label>
-            <input type = "text" id = "noun1">
+            <div class = "inline">
+                <label for = "fruit">Favorite fruit:</label>
+                <input type = "text" id = "fruit" placeholder="e.g. grapes" required>
+            </div>
 
-            <label for = "noun2">Provide another noun</label>
-            <input type = "text" id = "noun2">
+            <div class = "inline">
+                <label for = "veg">Favorite vegetable:</label>
+                <input type = "text" id = "veg" placeholder="e.g. potato" required>
+            </div>
 
-            <label for = "adj1">Provide an adjective</label>
-            <input type = "text" id = "adj1">
+            <div class = "inline">
+                <label for = "protein">Favorite protein:</label>
+                <input type = "text" id = "protein" placeholder="e.g. tofu" required>
+            </div>
 
-            <label for = "verb1">Provide a verb</label>
-            <input type = "text" id = "verb1">
+            <div class = "inline">
+                <label for = "dish">Favorite dish:</label>
+                <input type = "text" id = "dish" placeholder="e.g. curry" required>
+            </div>
 
-            <input type = "submit" value = "Send">
+            <div class = "inline">
+                <label for = "drink">Favorite drink:</label>
+                <input type = "text" id = "drink" placeholder="e.g. apple juice" required>
+            </div>
+
+            <input type = "submit" id = "btn" value = "Let's Cook!">
         </form>
 
-        <article id = "story"></article>
+        <section id="overlay" class="hidden">
+            <article id = "story"></article>
+            <button class="close">&otimes;</button>
+        </section>
     </main>
 
     <footer>
-
+        <p class= "footer"><a href="https://validator.w3.org/#validate_by_uri"> valid HTML5 /</a><a href="https://jigsaw.w3.org/css-validator/"> valid CSS</a></p>
     </footer> 
 </body>
 </html>
