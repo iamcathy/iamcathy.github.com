@@ -1,0 +1,140 @@
+html body {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    color: white;
+    background: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body::-webkit-scrollbar {
+    display: none;
+}
+
+header {
+    padding-top: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+#title {
+    font-family: 'Goblin One', cursive;
+    font-size: 60px;
+    letter-spacing: 5px;
+    animation: move 6s linear infinite;
+    z-index: 5;
+    margin-left: -80%;
+}
+
+@keyframes move {
+  100% {transform: translateX(101%);}
+}
+
+.sand {
+    /* The image used */
+    background-image: url("images/sand.JPG");
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bouquet {
+    /* The image used */
+    background-image: url("images/bouquet.jpg");
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flower {
+    /* The image used */
+    background-image: url("images/flowers.JPG");
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.creek {
+    /* The image used */
+    background-image: url("images/creek.JPG");
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.plants {
+    /* The image used */
+    background-image: url("images/plants.JPG");
+  
+    /* Set a specific height */
+    height: 500px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.description {
+    height:150px;
+    background-color:black;
+    font-size:36px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 150px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+ul li{
+    display: inline;
+    font-family: 'Goblin One', cursive;
+    padding-left: 20px; 
+    padding-right: 20px;
+    padding-top: -25px;
+    -webkit-text-stroke-width: .25px;
+    -webkit-text-stroke-color: black;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+
+
