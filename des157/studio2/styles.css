@@ -10,12 +10,14 @@ body {
     background-size: cover;
 }
 
+/* hide scrollbar */
 .body::-webkit-scrollbar {
     display: none;
 }
 
 header {
     padding-top: 10px;
+    /* make header sticky */
     position: -webkit-sticky;
     position: sticky;
     top: 0;
@@ -35,13 +37,11 @@ header {
 }
 
 .sand {
-    /* The image used */
     background-image: url("images/sand.JPG");
   
-    /* Set a specific height */
     height: 500px;
   
-    /* Create the parallax scrolling effect */
+    /* parallax effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,13 +49,10 @@ header {
 }
 
 .bouquet {
-    /* The image used */
     background-image: url("images/bouquet.jpg");
   
-    /* Set a specific height */
     height: 500px;
   
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -63,13 +60,10 @@ header {
 }
 
 .flower {
-    /* The image used */
     background-image: url("images/flowers.JPG");
   
-    /* Set a specific height */
     height: 500px;
   
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -77,13 +71,10 @@ header {
 }
 
 .creek {
-    /* The image used */
     background-image: url("images/creek.JPG");
   
-    /* Set a specific height */
     height: 500px;
   
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -91,13 +82,10 @@ header {
 }
 
 .plants {
-    /* The image used */
     background-image: url("images/plants.JPG");
   
-    /* Set a specific height */
     height: 500px;
   
-    /* Create the parallax scrolling effect */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -133,6 +121,12 @@ ul li{
 a{
     text-decoration: none;
     color: white;
+}
+
+footer{
+    text-align: right;
+    margin-right: 30px;
+    margin-top: -30px;
 }
 
 
