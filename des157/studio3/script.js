@@ -8,6 +8,8 @@
     
     const bgSound = new Audio("media/jazz.mp3");
     const yay = new Audio("media/yay.mp3");
+    const wah = new Audio("media/wah.mp3");
+    const diceSound = new Audio("media/dice.mp3");
 
     const gameData = {
         dice: ["images/1die.png", "images/2die.png", "images/3die.png",
@@ -30,6 +32,7 @@
     document.getElementById("story").style.padding = "40px 60px 50px 50px";
 
     startGame.addEventListener("click", function(){
+        bgSound.volume = 0.3;
         bgSound.play();
         document.getElementById("overlay").className = "hidden";
         gameData.index = Math.round(Math.random());
@@ -63,6 +66,7 @@
     }
 
     function throwDice(){
+        diceSound.play();
         actionArea.innerHTML = "";
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
         gameData.roll2 = Math.floor(Math.random() * 6) + 1;
@@ -73,12 +77,14 @@
         console.log(gameData);
 
         if ( gameData.rollSum === 2 ) {
+            wah.play();
             game.innerHTML += "<p>Oh snap! Snake eyes!</p>";
             gameData.score[gameData.index] = 0;
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             showCurrentScore();
             setTimeout(setUpTurn, 2000);
         } else if ( gameData.roll1 === 1 || gameData.roll2 === 1 ) {
+            wah.play();
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML += `<p id = "one">Sorry, one of your rolls was a one,<br> switching
                         to ${gameData.players[gameData.index]}</p>`
