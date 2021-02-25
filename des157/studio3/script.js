@@ -18,6 +18,28 @@
         gameEnd: 29
     };
 
+    //show overlay
+    const gameTitle = document.querySelector("#gametitle");
+    const story = document.querySelector("#story");
+    document.getElementById("overlay").className = "showing";
+
+    gameTitle.innerHTML = "Game of Pig";
+    story.innerHTML = '<br><br> There are two players. The player whose turn it is rolls the dice. The total of the roll is added to the current player\'s score, unless either die comes up as a "one". If this happens, this player\'s turn is over, and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other player. The first player to get 30 points or higher wins. <br><br> Oh, and if you roll two "ones" (snake eyes), your current score gets zeroed out. So don’t do that.';
+    document.getElementById("gametitle").style.padding = "40px 60px 50px 50px";
+    document.getElementById("story").style.padding = "40px 60px 50px 50px";
+
+    //more overlay stuff
+    document.querySelector(".close").addEventListener("click", function(){
+        event.preventDefault();
+        document.getElementById("overlay").className = "hidden";
+    });
+
+    document.addEventListener('keydown', function(event){
+        if (event.key === "Escape") {
+            document.getElementById("overlay").className = "hidden";
+        }
+    });
+
     startGame.addEventListener("click", function(){
         gameData.index = Math.round(Math.random());
         gameControl.innerHTML = "<h2>The Game Has Started</h2>";
@@ -33,6 +55,10 @@
 
     function setUpTurn() {
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+        if (gameData.index == 1) {
+            document.getElementById("game").className = "left";
+        }
+
         actionArea.innerHTML = '<button id = "roll">Roll the Dice</button>';
         document.getElementById("roll").addEventListener("click", function(){
             throwDice();

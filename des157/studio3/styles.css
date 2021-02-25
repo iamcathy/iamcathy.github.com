@@ -1,8 +1,9 @@
 body {
-    font-family: Arial;
+    font-family: 'Poppins', sans-serif;
     color: #333;
     padding: 50px;
     line-height: 1.5em;
+    position: relative;
 }
 
 button { 
@@ -13,13 +14,95 @@ div {
     padding: 20px;
 }
 
-#gamecontrol, #score {
+#gamecontrol {
     background-color: aliceblue;
+    position: absolute;
+    z-index: 10;
+    align-content: center;
+    margin-left: 430px;
+    margin-right: auto;
+}
+
+#score {
+    background-color: aliceblue;
+    position: absolute;
 }
 
 #game {
     background-color:#eaeaea;
+    position: absolute;
+    z-index: 10;
+    margin-left: 430px;
+    margin-right: auto;
 }
 #actions {
     background-color: silver;
+    position: absolute;
+    z-index: 10;
+}
+
+.split {
+    height: 100%;
+    width: 47.2%;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    overflow-x: hidden;
+    padding-top: 20px;
+}
+
+.left {
+    left: 0;
+    background-color: #5997DB;
+}
+
+.right {
+    right: 0;
+    background-color: #5FD6D3;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 20;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px;
+    width: 50vw;
+    height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    overflow-y: scroll;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
 }
