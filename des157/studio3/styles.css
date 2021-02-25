@@ -16,11 +16,23 @@ button {
     transition: all 0.3s ease 0s;
 }
 
+button:hover {
+    border: none;
+    background-color: white;
+    color: #333;
+}
+
 #quit {
     border-color: #333;
     color: #333;
     margin-left: 47rem;
     margin-top: -0.5%;
+}
+
+#quit:hover {
+    border: none;
+    background-color: #333;
+    color: white;
 }
 
 #startgame {
@@ -33,6 +45,12 @@ button {
     z-index: 11;
     border-color: #333;
     color: #333;
+}
+
+#startgame:hover {
+    border: none;
+    background-color: #333;
+    color: white;
 }
 
 div {
@@ -195,4 +213,22 @@ div {
 
 #one {
     text-align: center;
+}
+
+footer {
+    margin-top: 49%;
+    text-align: center;
+    color: white;
+    position: relative;
+    font-size: 12px;
+}
+
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #333;
 }

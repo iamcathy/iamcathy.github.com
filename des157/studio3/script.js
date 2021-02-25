@@ -5,10 +5,13 @@
     const game = document.getElementById("game");
     const score = document.getElementById("score");
     const actionArea = document.getElementById("actions");
+    
+    const bgSound = new Audio("media/jazz.mp3");
+    const yay = new Audio("media/yay.mp3");
 
     const gameData = {
-        dice: ["1die.jpg", "2die.jpg", "3die.jpg",
-                "4die.jpg", "5die.jpg", "6die.jpg"],
+        dice: ["images/1die.png", "images/2die.png", "images/3die.png",
+                "images/4die.png", "images/5die.png", "images/6die.png"],
         players: ["player1", "player2"],
         score: [0, 0],
         roll1: 0,
@@ -27,6 +30,7 @@
     document.getElementById("story").style.padding = "40px 60px 50px 50px";
 
     startGame.addEventListener("click", function(){
+        bgSound.play();
         document.getElementById("overlay").className = "hidden";
         gameData.index = Math.round(Math.random());
         gameControl.innerHTML += '<button id = "quit">Wanna Quit?</button>';
@@ -97,8 +101,9 @@
 
     function checkWinningCondition(){
         if(gameData.score[gameData.index] > gameData.gameEnd) {
+            yay.play();
             score.innerHTML = `<p>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</p>`;
-
+            document.getElementById("game").className = "hidden";
             actionArea.innerHTML = "";
             document.getElementById("quit").innerHTML = "New Game?"; 
         } else {
