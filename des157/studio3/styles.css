@@ -7,36 +7,97 @@ body {
 }
 
 button { 
-    padding: 10px;
+    border: 1.5px solid black;
+    padding: 15px;
+    border-radius: 6px;
+    border-color: #ffffff;
+    background-color: transparent;
+    color: white;
+    transition: all 0.3s ease 0s;
+}
+
+#quit {
+    border-color: #333;
+    color: #333;
+    margin-left: 47rem;
+    margin-top: -0.5%;
+}
+
+#startgame {
+    align-content: center;
+    margin-left: 35%;
+    margin-right: auto;
+    margin-top: 38%;
+    z-index: 1000;
+    position: relative;
+    z-index: 11;
+    border-color: #333;
+    color: #333;
 }
 
 div {
     padding: 20px;
 }
 
+#playerone {
+    margin-bottom: 36rem;
+    font-size: 40px;
+    margin-left: -2.7rem;
+    color: white;
+}
+
+#playertwo {
+    margin-bottom: 36rem;
+    font-size: 40px;
+    margin-left: 2.7rem;
+    color: white;
+}
+
 #gamecontrol {
-    background-color: aliceblue;
+    background-color: transparent;
     position: absolute;
     z-index: 10;
     align-content: center;
     margin-left: 430px;
     margin-right: auto;
+    margin-top: -4%;
 }
 
 #score {
-    background-color: aliceblue;
+    background-color: rgb(255, 255, 255);
     position: absolute;
+    height: 30px;
+    width: 100%;
+    margin-left: -50px;
+    margin-top: -50px;
+    text-align: center;
+}
+
+#score p{
+    margin-left: -45px;
+    margin-top: 2px;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+
+#pass {
+   display: flex;
+   justify-content: center; 
+   margin-left: 20px;
+   margin-top: 10px;
 }
 
 #game {
-    background-color:#eaeaea;
+    background-color: transparent;
     position: absolute;
     z-index: 10;
-    margin-left: 430px;
     margin-right: auto;
+    text-align: center;
+    color: white;
 }
+
 #actions {
-    background-color: silver;
+    background-color: none;
     position: absolute;
     z-index: 10;
 }
@@ -59,6 +120,26 @@ div {
 .right {
     right: 0;
     background-color: #5FD6D3;
+}
+
+.leftside {
+    margin-left: 15%;
+    margin-top: 36%;
+}
+
+.rightside {
+    margin-left: 67%;
+    margin-top: 36%;
+}
+
+.leftdice {
+    margin-left: 11.2%;
+    margin-top: 15%;
+}
+
+.rightdice {
+    margin-left: 63.9%;
+    margin-top: 15%;
 }
 
 .centered {
@@ -87,7 +168,7 @@ div {
     box-sizing: border-box;
     background-color: #fff;
     padding: 20px;
-    width: 50vw;
+    width: 52vw;
     height: 60vh;
     position: absolute;
     top: 50%;
@@ -95,6 +176,11 @@ div {
     transform: translate(-50%, -50%);
     border-radius: 2px;
     overflow-y: scroll;
+}
+
+#gametitle{
+    text-align: center;
+    margin-bottom: -1rem;
 }
 
 .hidden {
@@ -105,4 +191,8 @@ div {
 .showing {
     visibility: visible;
     opacity: 1;
+}
+
+#one {
+    text-align: center;
 }
