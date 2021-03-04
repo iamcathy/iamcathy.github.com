@@ -1,0 +1,106 @@
+body{
+    background-color: #FFDB94;
+}
+
+.nav {
+    background-color: rgb(255, 255, 255);
+    /* position: absolute; */
+    height: 70px;
+    width: 100%;
+    /* margin-left: -50px;
+    margin-top: -50px;
+    text-align: center; */
+    z-index: 5;
+}
+
+.navbuttons {
+    display: grid;
+    grid-template-columns: auto 4.5% 84%;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 4.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.question, .restart {
+    justify-self: end;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    grid-template-rows: repeat(4, 100px);
+    justify-content: center;
+    position: absolute;
+    top: 53.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.purple {
+    height: 100px;
+    width: 100px;
+    background-color: #8888d8;
+}
+
+.green {
+    height: 100px;
+    width: 100px;
+    background-color: #4ad1d1;
+}
+
+.six {
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.seven {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.eight {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.nine {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.ten {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.eleven {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.twelve {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.thirteen {
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
