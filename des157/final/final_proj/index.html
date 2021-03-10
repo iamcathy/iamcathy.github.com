@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of CAT</title>
+    <!-- <link rel="icon" type="image/png" href="images/3die.png"/> -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src = "script.js" defer></script>
+</head>
+<body>
+    <div class = "nav"></div>
+
+    <div class = "navbuttons">
+        <input type="image" src="images/pause.png" class = "pause"/>
+        <input type="image" src="images/restart.png" class = "restart" id = "quit"/>
+        <input type="image" src="images/question.png" class = "question"/>
+    </div>
+
+    <div id="gamecontrol">
+    </div>
+
+    <div class="split left">
+        <h2 id = "playerone">Player One</h2>
+    </div>
+    
+    <div class="split right">
+        <h2 id = "playertwo">Player Two</h2>
+    </div>
+
+    <div id="game"></div>
+    <div id="actions"></div>
+    <div id="score"></div> 
+    
+    <section id="overlay" class="hidden">
+        <article id = "story"></article>
+        <form id = "myForm">
+            <div class = "inline">
+                <label for = "name1">Player One Name:</label>
+                <input type = "text" id = "name1" required>
+
+                <label for = "name2">Player Two Name:</label>
+                <input type = "text" id = "name2" required>
+            </div>
+        <input type = "submit" id = "startgame" value = "Randomly Pick the First Player, and Start the Game!">
+        </form>
+        <!-- <button id="startgame">Randomly Pick the First Player, and Start the Game!</button> -->
+    </section>
+
+    <div class="board">
+        <div class =  "piece1"></div>
+        <div class =  "piece2"></div>
+        <div class = "purple one"></div>
+        <div class = "green two"></div>
+        <div class = "purple three"></div>
+        <div class = "green four"></div>
+        <div class = "purple five"></div>
+        <div class = "green six"></div>
+        <div class = "purple seven"></div>
+        <div class = "green eight"></div>
+        <div class = "purple nine"></div>
+        <div class = "green ten"></div>
+        <div class = "purple eleven"></div>
+        <div class = "green twelve"></div>
+        <div class = "purple thirteen"></div>
+    </div>
+
+    <footer>
+            <p class= "footer"><a href="https://validator.w3.org/#validate_by_uri" target="_blank" rel="noopener noreferrer"> valid HTML5</a> /<a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer"> valid CSS</a> /<a href="sources.html" target="_blank" rel="noopener noreferrer"> sources</a></p>
+    </footer> 
+</body>
+</html>

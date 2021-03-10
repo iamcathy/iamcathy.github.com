@@ -1,0 +1,362 @@
+body{
+    background-color: #FFDB94;
+}
+
+.nav {
+    background-color: rgb(255, 255, 255);
+    /* position: absolute; */
+    height: 70px;
+    width: 100%;
+    /* margin-left: -50px;
+    margin-top: -50px;
+    text-align: center; */
+    z-index: 5;
+}
+
+.navbuttons {
+    display: grid;
+    grid-template-columns: auto 4.5% 84%;
+    width: 100%;
+    justify-content: center;
+    position: absolute;
+    top: 4.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.question, .restart {
+    justify-self: end;
+}
+
+#score {
+    position: absolute;
+    text-align: center;
+    top: 4.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#overlay {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 20;
+}
+
+#overlay article {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px;
+    width: 52vw;
+    height: 60vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+#gametitle{
+    text-align: center;
+    margin-bottom: -1rem;
+    margin-top: -2px;
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.showing {
+    visibility: visible;
+    opacity: 1;
+}
+
+#myForm{
+    position: absolute;
+    margin-top: 38%;
+    z-index: 1000; 
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+input, label {
+    display: block;
+}
+
+#name1, #name2{
+    margin-bottom: 1em;
+}
+
+#startgame {
+    margin-top: 12%;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    position: relative;
+    border-color: #333;
+    color: #333;
+}
+
+#startgame:hover {
+    border: none;
+    background-color: #333;
+    color: white;
+}
+
+#game {
+    background-color: transparent;
+    z-index: 10;
+    margin-right: auto;
+    text-align: center;
+    color: #333;
+    /* margin-top: 5%; */
+}
+
+#game p {
+    margin-top: 20%;
+}
+
+#playerone, #playertwo {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    text-align: center;
+    letter-spacing: 2px;
+    top: -2%;
+}
+
+.left {
+    left: 0;
+    background-color: white;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: white;
+
+    position: absolute;
+    top: 63.4%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+
+    height: 43%;
+    width: 30%;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+.right {
+    right: 0;
+    background-color: white;
+    border-style: solid;
+    border-radius: 25px;
+    border-color: white;
+
+    position: absolute;
+    top: 44%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+
+    height: 43%;
+    width: 30%;
+    z-index: 0;
+    overflow-x: hidden;
+}
+
+.actionsleft {
+    position: absolute;
+    text-align: center;
+    top: 81%;
+    left: 23%;
+    transform: translate(-50%, -50%);
+
+    height: 5%;
+    width: 30%;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+.actionsright {
+    position: absolute;
+    text-align: center;
+    top: 61%;
+    left: 77%;
+    transform: translate(-50%, -50%);
+
+    height: 5%;
+    width: 30%;
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+.board{
+    display: grid;
+    grid-template-columns: repeat(9, 100px);
+    grid-template-rows: repeat(4, 100px);
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 53.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.purple {
+    height: 100px;
+    width: 100px;
+    background-color: #8888d8;
+}
+
+.green {
+    height: 100px;
+    width: 100px;
+    background-color: #4ad1d1;
+}
+
+.piece1 {
+    height: 70px;
+    width: 70px;
+    background-color: #333;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    z-index: 1;
+}
+
+.piece2 {
+    height: 70px;
+    width: 70px;
+    background-color: white;
+    border-radius: 50%;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    z-index: 2;
+}
+
+.one {
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.two {
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+.three {
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.four {
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 4;
+    grid-column-end: 5;
+}
+
+.five {
+    grid-row-start: 0;
+    grid-row-end: 1;
+    grid-column-start: 5;
+    grid-column-end: 6;
+}
+
+.six {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.seven {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.eight {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.nine {
+    grid-column-start: 5;
+    grid-column-end: 6;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.ten {
+    grid-column-start: 6;
+    grid-column-end: 7;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.eleven {
+    grid-column-start: 7;
+    grid-column-end: 8;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.twelve {
+    grid-column-start: 8;
+    grid-column-end: 9;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.thirteen {
+    grid-column-start: 9;
+    grid-column-end: 10;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+footer {
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 12px;
+}
+
+footer a{
+    text-decoration: none;
+    color: #8888d8;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #333;
+}
