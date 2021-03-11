@@ -129,7 +129,7 @@ input, label {
     /* margin-top: 5%; */
 }
 
-#game p {
+#game h4 {
     margin-top: 20%;
 }
 
@@ -228,20 +228,21 @@ input, label {
 }
 
 .piece1 {
-    height: 70px;
-    width: 70px;
-    background-color: #333;
+    height: 100px;
+    width: 100px;
+    /* background-color: #333; */
     grid-row-start: 0;
     grid-row-end: 1;
     grid-column-start: 1;
     grid-column-end: 2;
     z-index: 1;
+    left: 0px;
 }
 
 .piece2 {
-    height: 70px;
-    width: 70px;
-    background-color: white;
+    height: 100px;
+    width: 100px;
+    /* background-color: white; */
     border-radius: 50%;
     grid-row-start: 0;
     grid-row-end: 1;
@@ -339,6 +340,22 @@ input, label {
     grid-column-end: 10;
     grid-row-start: 4;
     grid-row-end: 5;
+}
+
+.first {
+    border-radius: 20% 0% 0% 20%;
+}
+
+.last {
+    border-radius: 0% 20% 20% 0%;
+}
+
+.corner1{
+    border-radius: 0% 20% 0% 0%;
+}
+
+.corner2{
+    border-radius: 0% 0% 0% 20%;
 }
 
 footer {
