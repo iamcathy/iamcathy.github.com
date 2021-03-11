@@ -33,7 +33,7 @@
     const story = document.querySelector("#story");
     document.getElementById("overlay").className = "showing";
 
-    story.innerHTML = '<h2 id = "gametitle">Game of CAT</h2><br><br> There are two players. The player whose turn it is rolls the dice. The number the player gets when they roll the dice is how many spaces their piece will move. The goal of the game is to get your piece to the end of the board before the other player does.';
+    story.innerHTML = '<h2 id = "gametitle">GAME OF CAT</h2><br><br> There are two players. The player whose turn it is rolls the dice. If you roll a one, you move <strong>one</strong> space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your piece to the end of the board before the other player does.';
     document.getElementById("story").style.padding = "40px 60px 50px 50px";
 
     form.addEventListener("submit", function(event){
@@ -43,10 +43,25 @@
     
         document.getElementById("overlay").className = "hidden";
         gameData.index = Math.round(Math.random());
-        /* gameControl.innerHTML += '<button id = "quit">Wanna Quit?</button>'; */
 
         document.getElementById("quit").addEventListener("click", function(){
             location.reload();
+        });
+
+        document.getElementById("pause").addEventListener("click", function(){
+            document.getElementById("overlay2").className = "showing";
+        });
+
+        document.getElementById("resume").addEventListener("click", function(){
+            document.getElementById("overlay2").className = "hidden";
+        });
+
+        document.getElementById("question").addEventListener("click", function(){
+            document.getElementById("overlay3").className = "showing";
+        });
+
+        document.getElementById("back").addEventListener("click", function(){
+            document.getElementById("overlay3").className = "hidden";
         });
 
         gameData.players[0] = document.querySelector("#name1").value;
@@ -75,7 +90,7 @@
             document.getElementById("game").className = "right";
         }
 
-        actionArea.innerHTML = '<button id = "roll">Roll the Dice</button>';
+        actionArea.innerHTML = '<button id = "roll">Roll the Dice!</button>';
         document.getElementById("roll").addEventListener("click", function(){
             throwDice();
         });

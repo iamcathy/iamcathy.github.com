@@ -7,7 +7,6 @@ body {
 }
 
 #title {
-    font-family: 'Playfair Display', serif;
     font-size: 45px;
     letter-spacing: 1px;
     color: #2c13e1;
@@ -21,7 +20,6 @@ body {
     margin-left: 59%;
     margin-right: 5%;
     margin-bottom: 6.3%;
-    font-family: 'Lato', sans-serif;
     letter-spacing: 1px;
 }
 
@@ -29,7 +27,7 @@ body {
     display:flex; 
     flex-direction: row;
     align-items: center;
-    margin-bottom: 1rem;
+    
 }
 
 label {

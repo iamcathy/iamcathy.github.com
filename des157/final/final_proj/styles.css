@@ -4,12 +4,8 @@ body{
 
 .nav {
     background-color: rgb(255, 255, 255);
-    /* position: absolute; */
     height: 70px;
     width: 100%;
-    /* margin-left: -50px;
-    margin-top: -50px;
-    text-align: center; */
     z-index: 5;
 }
 
@@ -55,6 +51,19 @@ body{
     z-index: 20;
 }
 
+#gametitle {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    letter-spacing: 2px;
+    font-size: 24px;
+}
+
+#story{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+}
+
 #overlay article {
     box-sizing: border-box;
     background-color: #fff;
@@ -65,7 +74,7 @@ body{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 2px;
+    border-radius: 12px;
     overflow: hidden;
 }
 
@@ -102,21 +111,63 @@ input, label {
     margin-bottom: 1em;
 }
 
+.inline {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-gap: 5px;
+    padding-bottom: 70px;
+}
+
+input, label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    margin-right: 1em;
+}
+
 #startgame {
-    margin-top: 12%;
+    margin-top: 6%;
     position: absolute;
     top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    position: relative;
-    border-color: #333;
-    color: #333;
+    background-color: #a8a8f0;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    transition: all 0.3s ease 0s;
 }
 
 #startgame:hover {
     border: none;
-    background-color: #333;
+    background-color: #4ad1d1;
+    color: white;
+}
+
+#roll {
+    background-color: #a8a8f0;
+    color: #1d1d1d;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-radius: 10px;
+    border: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease 0s;
+}
+
+#roll:hover {
+    border: none;
+    background-color: #4ad1d1;
     color: white;
 }
 
@@ -126,7 +177,10 @@ input, label {
     margin-right: auto;
     text-align: center;
     color: #333;
-    /* margin-top: 5%; */
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 21px;
 }
 
 #game h4 {
@@ -230,7 +284,6 @@ input, label {
 .piece1 {
     height: 100px;
     width: 100px;
-    /* background-color: #333; */
     grid-row-start: 0;
     grid-row-end: 1;
     grid-column-start: 1;
@@ -242,7 +295,6 @@ input, label {
 .piece2 {
     height: 100px;
     width: 100px;
-    /* background-color: white; */
     border-radius: 50%;
     grid-row-start: 0;
     grid-row-end: 1;
@@ -358,6 +410,136 @@ input, label {
     border-radius: 0% 0% 0% 20%;
 }
 
+#overlay2 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 5000;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+
+#overlay2 h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#overlay3 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 5000;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+#overlay3 article {
+    box-sizing: border-box;
+    background-color: #fff;
+    padding: 20px;
+    width: 58vw;
+    height: 42vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#overlay3 h1 {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    letter-spacing: 2px;
+    font-size: 26px;
+}
+
+#rules {
+    margin-top: 4%;
+}
+
+#story2 {
+    padding: 18px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+#back {
+    margin-top: 6%;
+    position: absolute;
+    top: 52.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    background-color: #a8a8f0;
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 16px;
+    padding-right: 16px;
+    border: none;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    transition: all 0.3s ease 0s;
+}
+
+#back:hover {
+    border: none;
+    background-color: #4ad1d1;
+    color: white;
+}
+
+#resume {
+    background-color: #a8a8f0;
+    color: #1d1d1d;
+    padding: 20px;
+    padding-left: 26px;
+    padding-right: 26px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    transition: all 0.3s ease 0s;
+}
+
+#resume:hover {
+    border: none;
+    background-color: #4ad1d1;
+    color: white;
+}
+
 footer {
     position: absolute;
     top: 95%;
@@ -366,6 +548,9 @@ footer {
     text-align: center;
     color: white;
     font-size: 12px;
+
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease 0s;
 }
 
 footer a{
@@ -375,5 +560,5 @@ footer a{
 
 a:hover{
     text-decoration: none;
-    color: #333;
+    color: #4ad1d1;
 }
