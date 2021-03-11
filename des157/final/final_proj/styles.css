@@ -570,6 +570,12 @@ input, label {
     padding-left: 30px;
 }
 
+#story3 {
+    padding: 18px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
 #back {
     margin-top: 6%;
     position: absolute;
