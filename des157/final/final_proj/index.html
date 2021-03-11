@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game of CAT</title>
-    <!-- <link rel="icon" type="image/png" href="images/3die.png"/> -->
+    <link rel="icon" type="image/png" href="images/3die.png"/>
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="normalize.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
@@ -26,7 +26,8 @@
 
     <img src="images/cat.png" id = "badge1">
     <img src="images/mouse.png" id = "badge2">
-    
+    <img src="images/door.png" id = "door">
+
     <div class="split left">
         <h2 id = "playerone">Player One</h2>
     </div>
@@ -59,8 +60,13 @@
     </section>
 
     <section id="overlay3" class="hidden">
-            <article id = "story2"><h1 id = "rules">RULES</h1><br><p id = "story2">There are two players. The player whose turn it is rolls the dice. If you roll a <strong>one</strong>, you move one space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your piece to the end of the board before the other player does.</p></article>
+            <article id = "story2"><h1 id = "rules">RULES</h1><br><p id = "story2">There are two mice who are trying to get home before they are caught by the cat. The mouse whose turn it is rolls the dice. If you roll a <strong>one</strong>, you move one space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your mouse back home before the other mouse gets there.</p></article>
             <button id = "back">Back to Game!</button>
+    </section>
+
+    <section id="overlay4" class="hidden">
+            <article id = "story4"></article>
+            <button id = "replay">PLAY AGAIN?</button>
     </section>
 
     <div class="board">

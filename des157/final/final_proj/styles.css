@@ -60,7 +60,7 @@ body{
 
 #story{
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 26px;
 }
 
@@ -310,8 +310,6 @@ input, label {
     grid-column-end: 2;
     z-index: 1;
     left: 0px;
-
-    transition: all 0.3s ease 0s;
 }
 
 .piece2 {
@@ -323,8 +321,16 @@ input, label {
     grid-column-start: 1;
     grid-column-end: 2;
     z-index: 2;
+}
 
-    transition: all 0.3s ease 0s;
+#door {
+    height: 125px;
+    width: 125px;
+    position: absolute;
+    top: 78.5%;
+    left: 85.4%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
 }
 
 .one {
@@ -502,6 +508,56 @@ input, label {
     color: #333;
     letter-spacing: 2px;
     font-size: 26px;
+}
+
+#overlay4 {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+    transition-property: opacity, visibility;
+    transition-duration: 1s;
+    transition-timing-function: ease;
+    z-index: 5000;
+
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 40px;
+}
+
+#overlay4 h1 {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#replay {
+    background-color: #a8a8f0;
+    color: #1d1d1d;
+    padding: 20px;
+    padding-left: 26px;
+    padding-right: 26px;
+    border-radius: 10px;
+    border: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 26px;
+    transition: all 0.3s ease 0s;
+}
+
+#replay:hover {
+    border: none;
+    background-color: #4ad1d1;
+    color: white;
 }
 
 #rules {

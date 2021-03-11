@@ -17,6 +17,9 @@
     const yay = new Audio("media/yay.mp3");
     const wah = new Audio("media/wah.mp3");
     const diceSound = new Audio("media/dice.mp3");
+    const moveSound = new Audio("media/move.mp3");
+    const roll2Sound = new Audio("media/roll2.mp3");
+    const btnSound = new Audio("media/button.mp3");
 
     const gameData = {
         dice: ["images/1die.png", "images/2die.png", "images/3die.png"],
@@ -33,7 +36,7 @@
     const story = document.querySelector("#story");
     document.getElementById("overlay").className = "showing";
 
-    story.innerHTML = '<h2 id = "gametitle">GAME OF CAT</h2><br><br> There are two players. The player whose turn it is rolls the dice. If you roll a <strong>one</strong>, you move one space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your piece to the end of the board before the other player does.';
+    story.innerHTML = '<h2 id = "gametitle">GAME OF CAT</h2><br><br> There are two mice who are trying to get home before they are caught by the cat. The mouse whose turn it is rolls the dice. If you roll a <strong>one</strong>, you move one space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your mouse back home before the other mouse gets there.';
     document.getElementById("story").style.padding = "40px 60px 50px 50px";
 
     form.addEventListener("submit", function(event){
@@ -45,23 +48,34 @@
         gameData.index = Math.round(Math.random());
 
         document.getElementById("quit").addEventListener("click", function(){
+            btnSound.play();
             location.reload();
         });
 
         document.getElementById("pause").addEventListener("click", function(){
+            btnSound.play();
+            bgSound.pause();
             document.getElementById("overlay2").className = "showing";
         });
 
         document.getElementById("resume").addEventListener("click", function(){
+            bgSound.play();
             document.getElementById("overlay2").className = "hidden";
         });
 
         document.getElementById("question").addEventListener("click", function(){
+            btnSound.play();
+            bgSound.pause();
             document.getElementById("overlay3").className = "showing";
         });
 
         document.getElementById("back").addEventListener("click", function(){
+            bgSound.play();
             document.getElementById("overlay3").className = "hidden";
+        });
+
+        document.getElementById("replay").addEventListener("click", function(){
+            location.reload();
         });
 
         gameData.players[0] = document.querySelector("#name1").value;
@@ -179,7 +193,7 @@
                 setTimeout(setUpTurn, 2000);
             }
         } else if ( gameData.roll1 === 2) {
-            wah.play();
+            roll2Sound.play();
             showCurrentScore()
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML += `<p id = "one">Sorry, you didn't roll a one,<br> switching
@@ -188,6 +202,7 @@
         } else if ( gameData.roll1 === 1 ) {
             console.log(`gameData.roll1`);
             console.log(gameData.rollSum);
+            moveSound.play();
             gameData.rollSum = gameData.roll1;
             game.innerHTML += "<p>Your piece moves one space!</p>";
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.roll1;
@@ -255,7 +270,7 @@
             score.innerHTML = `<p>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</p>`;
             document.getElementById("game").className = "hidden";
             actionArea.innerHTML = "";
-            document.getElementById("quit").innerHTML = "New Game?"; 
+            showWinner(); 
         } else {
             showCurrentScore();
         }
@@ -274,5 +289,10 @@
 
     function defaultScore() {
         score.innerHTML = `<h2><strong>GAME OF CAT</strong></h2>`;
+    }
+
+    function showWinner() {
+        document.getElementById("overlay4").className = "showing";
+        story4.innerHTML = `<h1>${gameData.players[gameData.index]} wins!</h1>`;
     }
 })();
