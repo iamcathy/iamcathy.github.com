@@ -187,6 +187,26 @@ input, label {
     margin-top: 20%;
 }
 
+#badge1 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 43%;
+    left: 10%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
+#badge2 {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    top: 24%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+}
+
 #playerone, #playertwo {
     font-family: 'Montserrat', sans-serif;
     color: #333;
@@ -290,6 +310,8 @@ input, label {
     grid-column-end: 2;
     z-index: 1;
     left: 0px;
+
+    transition: all 0.3s ease 0s;
 }
 
 .piece2 {
@@ -301,6 +323,8 @@ input, label {
     grid-column-start: 1;
     grid-column-end: 2;
     z-index: 2;
+
+    transition: all 0.3s ease 0s;
 }
 
 .one {

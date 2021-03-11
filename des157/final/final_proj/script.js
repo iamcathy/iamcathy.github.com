@@ -33,7 +33,7 @@
     const story = document.querySelector("#story");
     document.getElementById("overlay").className = "showing";
 
-    story.innerHTML = '<h2 id = "gametitle">GAME OF CAT</h2><br><br> There are two players. The player whose turn it is rolls the dice. If you roll a one, you move <strong>one</strong> space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your piece to the end of the board before the other player does.';
+    story.innerHTML = '<h2 id = "gametitle">GAME OF CAT</h2><br><br> There are two players. The player whose turn it is rolls the dice. If you roll a <strong>one</strong>, you move one space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your piece to the end of the board before the other player does.';
     document.getElementById("story").style.padding = "40px 60px 50px 50px";
 
     form.addEventListener("submit", function(event){

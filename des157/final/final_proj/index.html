@@ -16,14 +16,17 @@
     <div class = "nav"></div>
 
     <div class = "navbuttons">
-        <input type="image" src="images/pause.png" class = "pause" id = "pause"/>
-        <input type="image" src="images/restart.png" class = "restart" id = "quit"/>
-        <input type="image" src="images/question.png" class = "question" id = "question"/>
+        <input type="image" src="images/pause.png" title = "pause game" class = "pause" id = "pause"/>
+        <input type="image" src="images/restart.png" title = "restart game?" class = "restart" id = "quit"/>
+        <input type="image" src="images/question.png" title = "rules" class = "question" id = "question"/>
     </div>
 
     <div id="gamecontrol">
     </div>
 
+    <img src="images/cat.png" id = "badge1">
+    <img src="images/mouse.png" id = "badge2">
+    
     <div class="split left">
         <h2 id = "playerone">Player One</h2>
     </div>
@@ -56,7 +59,7 @@
     </section>
 
     <section id="overlay3" class="hidden">
-            <article id = "story2"><h1 id = "rules">RULES</h1><br><p id = "story2">There are two players. The player whose turn it is rolls the dice. If you roll a one, you move <strong>one</strong> space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your piece to the end of the board before the other player does.</p></article>
+            <article id = "story2"><h1 id = "rules">RULES</h1><br><p id = "story2">There are two players. The player whose turn it is rolls the dice. If you roll a <strong>one</strong>, you move one space forward. Rolling a <strong>two</strong> means the other player gets to roll. Last, rolling a <strong>three</strong> means you have to move back one space. The goal of the game is to get your piece to the end of the board before the other player does.</p></article>
             <button id = "back">Back to Game!</button>
     </section>
 
